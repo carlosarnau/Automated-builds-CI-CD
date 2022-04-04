@@ -23,7 +23,7 @@ After this brief introduction on the pilar concepts about automatic builds, I’
 
 Now, with that beeing clear we can proceed to cerate a automated build with GitHub actions for the first time. The steps are:
 1. First we need to create a repository to be able to configure an automated build.
-![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/1.jpg)
+![](1.jpg)
 <p>&nbsp;</p>
 
 2. Go to Actions in the menu above.
