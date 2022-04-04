@@ -25,27 +25,35 @@ Now, with that beeing clear we can proceed to cerate a automated build with GitH
 1. First we need to create a repository to be able to configure an automated build.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/1.jpg)
 <p>&nbsp;</p>
+
 2. Go to Actions in the menu above.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/3.jpg)
 <p>&nbsp;</p>
+
 3. Create a new worklfow.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/4.jpg)
 <p>&nbsp;</p>
+
 4. Set up a workflow yourself.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/5.jpg)
 <p>&nbsp;</p>
+
 5. Edit, and when you finish press Start commit.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/6.jpg)
 <p>&nbsp;</p>
+
 6. Go back to Actions.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/7.jpg)
 <p>&nbsp;</p>
+
 7. Go to the workflow you just created.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/8.jpg)
 <p>&nbsp;</p>
+
 8. Run workflow
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/9.jpg)
 <p>&nbsp;</p>
+
 9. Check for possible errors.
 ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
 
@@ -66,19 +74,26 @@ This means that every time an issue gets opened in this repository the GitHub Sc
 If you enable email or web notifications for GitHub Actions, you'll receive a notification when any workflow runs that you've triggered have completed. The notification will include the workflow run's status (including successful, failed, neutral, and canceled runs). You can also choose to receive a notification only when a workflow run has failed. For more information about enabling or disabling notifications, see "About notifications."
 GitHub allows us to change our notification settings and manage our subscriptions. To do that we have to:
 1. Click into the bell icon.
-<img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/A.jpg" width=800 align=middle>
+![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+<p>&nbsp;</p>
 
 2. Go to Manage notifications.
-<img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/B.jpg" width=800 align=middle>
+![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+<p>&nbsp;</p>
 
 3. Depending in if you want to change yout notification settings or manage your subscriptions you will chose between Notification settings or Subscriptions.
-<img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/C.jpg" width=800 align=middle>
+![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+  <p>&nbsp;</p>
   
   A. Notification settings
-  <img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/D.jpg" width=800 align=middle>
-  <img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/E.jpg" width=800 align=middle>
+  ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+  
+  ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+  <p>&nbsp;</p>
   
   B. Subscriptions
-  <img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/F.jpg" width=800 align=middle>
-  <img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/G.jpg" width=800 align=middle>
-  <img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/835e769a73abb79bb87b1f614954fab05caff8f5/docs/images/2/H.jpg" width=800 align=middle>
+  ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+  
+  ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
+  
+  ![](https://github.com/carlosarnau/Automated-builds-CI-CD/blob/110e4a7eb2f563e968868f8f2aa9284b07df53a1/docs/images/1/10.jpg)
