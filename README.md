@@ -6,6 +6,8 @@ CD/CI are methods frequently used to deliver apps to customers making use of aut
 
 But even though all three are part of the software delivery process, each has its own requirements, and more importantly, benefits. So, understanding the differences between them it’s crucial to properly implementing them.
 
+<img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/7f27c92466af9d5decd77d3d92f0b7b5475963e3/docs/CDandCI.png" width=500 align=middle>
+
 <p>&nbsp;</p>
 
 
@@ -14,6 +16,8 @@ Hi!
 I'm Carlos, a student coursing the second year Bachelor's degree in Video Game Design and Development at UPC university. In this repository I'll capture my research about Automated builds CI+CD which I had to perform along this second semester.
 
 I hope you enjoy it!
+
+<img src="https://github.com/carlosarnau/Automated-builds-CI-CD/blob/7f27c92466af9d5decd77d3d92f0b7b5475963e3/docs/Photo.jpg" width=150 align=middle>
 
 <p>&nbsp;</p>
 
