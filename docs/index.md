@@ -7,15 +7,18 @@ Both methods are quite common into the *DevOps* world. *DevOps* is a set of prac
 
 Understanding the differences between them it’s crucial to properly implementing them.
 
-
 ### CI (Continuous Integration)
 Definition
+
+![](CI-CD1.jpg)
 
 ### CI (Continuous Delivery)
 Definition
 
 ### CI (Continuous Deployment)
 Definition
+
+![](CI-CD2.png)
 
 <p>&nbsp;</p>
 
@@ -26,41 +29,41 @@ After this brief introduction on the pilar concepts about automatic builds, I’
 - Eliminates the human error possibility
 - Validate that your builds are running on different platforms.
 
-Now, with that beeing clear we can proceed to cerate a automated build with GitHub actions for the first time. The steps are:
+Now, with that beeing clear we can proceed to cerate a automated build with GitHub actions for the first time. The main steps are:
 1. First we need to **create a repository** to be able to configure an automated build.
-![]()
+![](gitactions1.jpg)
 <p>&nbsp;</p>
 
 2. Go to **Actions** in the menu above.
-![]()
+![](gitactions3.jpg)
 <p>&nbsp;</p>
 
 3. Create a **new worklfow**.
-![]()
+![](gitactions4.jpg)
 <p>&nbsp;</p>
 
 4. **Set up a workflow yourself**.
-![]()
+![](gitactions5.jpg)
 <p>&nbsp;</p>
 
 5. Edit, and when you finish press **Start commit**.
-![]()
+![](gitactions6.jpg)
 <p>&nbsp;</p>
 
 6. Go back to **Actions**.
-![]()
+![](gitactions7.jpg)
 <p>&nbsp;</p>
 
 7. Go to the workflow you just created.
-![]()
+![](gitactions8.jpg)
 <p>&nbsp;</p>
 
 8. **Run workflow**
-![]()
+![](gitactions9.jpg)
 <p>&nbsp;</p>
 
 9. Check for possible errors.
-![]()
+![](gitactions10.jpg)
 
 <p>&nbsp;</p>
 
@@ -68,22 +71,22 @@ Now, with that beeing clear we can proceed to cerate a automated build with GitH
 ## Guide to write scripts
 GitHub scripts are awesome actions that allows us to quickly interact with the GitHub **API**(application programming interface) directly from our workflow. More specifically, we will use the workflow context to script any API that we may need.
 To be able to create, add or modify a script we need to:
-1. Click into the bell icon.
-![]()
+1. Go to your workflows
+![](edscript1.jpg)
 <p>&nbsp;</p>
 
-2. Go to Manage notifications.
-![]()
+2.Open the .yml
+![](edscript2.jpg)
 <p>&nbsp;</p>
 
-3. Depending in if you want to change yout notification settings or manage your subscriptions you will chose between Notification settings or Subscriptions.
-![]()
+3. Make your changes!
+![](edscript3.jpg)
   <p>&nbsp;</p>
   
 In this example every time an issue gets opened in this repository the GitHub Script you wrote will be executed.
 <p></p>
 
-After doing a depth research about manual copying README files I came out with nothing. The only what I found was a script on how to render your README with GitHub Actions
+After doing a depth research about manual copying README files I came out with nothing. The only what I found was a script on how to render your README with GitHub Actions.
 
 <p>&nbsp;</p>
 
@@ -97,29 +100,29 @@ After doing a depth research about manual copying README files I came out with n
 If you enable email or web notifications for GitHub Actions, you'll receive a notification when any workflow runs that you've triggered have completed. The notification will include the workflow run's status (including successful, failed, neutral, and canceled runs). You can also choose to receive a notification only when a workflow run has failed. For more information about enabling or disabling notifications, see "About notifications."
 GitHub allows us to change our notification settings and manage our subscriptions. To do that we have to:
 1. Click into the bell icon.
-![]()
+![](notif1.jpg)
 <p>&nbsp;</p>
 
 2. Go to Manage notifications.
-![]()
+![](notif2.jpg)
 <p>&nbsp;</p>
 
 3. Depending in if you want to change yout notification settings or manage your subscriptions you will chose between Notification settings or Subscriptions.
-![]()
+![](notif3.jpg)
   <p>&nbsp;</p>
   
   A. Notification settings
-  ![]()
+  ![](notif4.jpg)
   
-  ![]()
+  ![](notif5.jpg)
   <p>&nbsp;</p>
   
   B. Subscriptions
-  ![]()
+  ![](notif6.jpg)
   
-  ![]()
+  ![](notif7.jpg)
   
-  ![]()
+  ![](notif8.jpg)
   
 <p>&nbsp;</p>
 
