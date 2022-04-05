@@ -1,8 +1,9 @@
-# Automated builds CI + CD
-
-CD/CI are methods frequently used to deliver apps to customers making use of automation into the stages of the app development. The main concepts attributed to CD and CI are Continuous Integration for CI and Continuous Delivery and/or Continuous Deployment for CD.
-Both methods are quite common into the DevOps world, but what’s DevOps? DevOps is a set of practices that brings together software development (Dev) and IT operations (Ops). Its goal is to make the software development lifecycle faster and provide high quality continuous delivery.
-But even though all three are part of the software delivery process, each has its own requirements, and more importantly, benefits. So, understanding the differences between them it’s crucial to properly implementing them.
+## Introduction
+CD/CI are methods frequently used to deliver apps to customers making use of automation into the stages of the app development. The main concepts attributed to CD and CI are Continuous Integration for CI and Continuous Delivery and/or Continuous Deployment for CD. 
+/n
+Both methods are quite common into the DevOps world, but what’s DevOps? DevOps is a set of practices that brings together software development (Dev) and IT operations (Ops). Its goal is to make the software development lifecycle faster and provide high quality continuous delivery. But even though all three are part of the software delivery process, each has its own requirements, and more importantly, benefits. 
+/n
+Understanding the differences between them it’s crucial to properly implementing them.
 
 ### CI (Continuous Integration)
 Definition
@@ -15,7 +16,8 @@ Definition
 
 <p>&nbsp;</p>
 
-## How to config automatic builds with GitHub Actions:
+
+## How to config automatic builds with GitHub Actions
 After this brief introduction on the pilar concepts about automatic builds, I’ll proceed with the teoric explanation of how to configurate automatic builds using GitHub Actions. But first of all, I would like to explain why you should use this method to create your GitHub builds:
 - Avoid having the problems of “It worked on my machine when I built it”.
 - Eliminates the human error possibility
@@ -59,16 +61,22 @@ Now, with that beeing clear we can proceed to cerate a automated build with GitH
 
 <p>&nbsp;</p>
 
-## Guide to write scripts, manual copying README files, etc:
+
+## Guide to write scripts, manual copying README files, etc
 GitHub Script is an awesome action that allows us to quickly interact with the GitHub API(application programming interface) directly from our workflow. More specifically, we will use the workflow context to script any API that we may need.
 To be able to create, add or modify a script we need to return to the .yml file of the workflow where we want the script to be run to.
+
 This means that every time an issue gets opened in this repository the GitHub Script you wrote will execute.
 
-<p>&nbsp;</p>
-
-## Automatically zip and upload back to github (CD):
+After doing a further research about manual copying README files I came out with nothing. The only what I found was a script on how to render your README with GitHub Actions
 
 <p>&nbsp;</p>
+
+
+## Automatically zip and upload back to github (CD)
+
+<p>&nbsp;</p>
+
 
 ## Automatic builds and notifications:
 If you enable email or web notifications for GitHub Actions, you'll receive a notification when any workflow runs that you've triggered have completed. The notification will include the workflow run's status (including successful, failed, neutral, and canceled runs). You can also choose to receive a notification only when a workflow run has failed. For more information about enabling or disabling notifications, see "About notifications."
