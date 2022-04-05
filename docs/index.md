@@ -18,7 +18,7 @@ Definition
 ### CI (Continuous Deployment)
 Definition
 
-![](CI-CD2.png)
+![](CI-CD2.jpg)
 
 <p>&nbsp;</p>
 
