@@ -65,7 +65,7 @@ Now, with that beeing clear we can proceed to cerate a automated build with GitH
 <p>&nbsp;</p>
 
 
-## Guide to write scripts, manual copying README files, etc
+## Guide to write scripts
 GitHub scripts are awesome actions that allows us to quickly interact with the GitHub **API**(application programming interface) directly from our workflow. More specifically, we will use the workflow context to script any API that we may need.
 To be able to create, add or modify a script we need to:
 1. Click into the bell icon.
@@ -93,7 +93,7 @@ After doing a depth research about manual copying README files I came out with n
 <p>&nbsp;</p>
 
 
-## Automatic builds and notifications:
+## Automatic builds and notifications
 If you enable email or web notifications for GitHub Actions, you'll receive a notification when any workflow runs that you've triggered have completed. The notification will include the workflow run's status (including successful, failed, neutral, and canceled runs). You can also choose to receive a notification only when a workflow run has failed. For more information about enabling or disabling notifications, see "About notifications."
 GitHub allows us to change our notification settings and manage our subscriptions. To do that we have to:
 1. Click into the bell icon.
@@ -120,3 +120,15 @@ GitHub allows us to change our notification settings and manage our subscription
   ![]()
   
   ![]()
+  
+<p>&nbsp;</p>
+
+
+## Webgraphy
+- What is CI/CD? -> <https://www.redhat.com/en/topics/devops/what-is-ci-cd>
+- Intro to Continuous Integration, Continuous Delivery, and Continuous Deployment -> <https://www.indellient.com/blog/whats-the-difference-between-continuous-integration-continuous-delivery-and-continuous-deployment/>
+- Continuous integration vs. delivery vs. deployment -> <https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment>
+- Understanding GitHub Actions -> <https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions>
+- How to Use Github Actions to Automate Your Repository Builds -> <https://www.cloudsavvyit.com/15207/how-to-use-github-actions-to-automate-your-repository-builds/>
+- CI/CD for C/C++ games using GitHub Actions -> <https://thatonegamedev.com/cpp/ci-cd-for-c-c-games-using-github-actions/>
+- How to automate the MSI Building with GitHub Actions -> <https://www.youtube.com/watch?v=T_Rj3_M-m8I>
