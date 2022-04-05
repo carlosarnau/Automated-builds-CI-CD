@@ -82,7 +82,45 @@ To be able to create, add or modify a script we need to:
 3. Make your changes!
 ![](edscript3.jpg)
   <p>&nbsp;</p>
-  
+
+
+### Example:
+```yaml       
+name: Learning GitHub Script
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on new issue
+        uses: actions/github-script@0.8.0
+        with:
+          github-token: {% raw %${{secrets.GITHUB-TOKEN}}{% endraw %}
+          script: |
+              github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "🎉 You've created this issue comment using GitHub Script!!!"
+            })
+      - name: Add issue to project board
+        if: contains(github.event.issue.labels.*.name, 'bug')
+        uses: actions/github-script@0.8.0
+        with:
+          github-token: {% raw %${{secrets.GITHUB-TOKEN}}{% endraw %}
+          script: |
+              github.projects.createCard({
+              column.id: {{columID}},
+              content_id: context.payload.issue.id,
+              content_type: "Issue"
+            })  
+```           
+            
+            
 In this example every time an issue gets opened in this repository the GitHub Script you wrote will be executed.
 <p></p>
 
@@ -92,7 +130,47 @@ After doing a depth research about manual copying README files I came out with n
 
 
 ## Automatically zip and upload back to github (CD)
+```yaml
+name: Create release
 
+on:
+ release:
+   types:
+     - created
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+
+   steps:
+   - uses: actions/checkout@v2
+
+   - name: Get Composer Cache Directory
+     id: composer-cache
+     run: |
+       echo "::set-output name=dir::$(composer config cache-files-dir)"
+   - uses: actions/cache@v2
+     with:
+       path: ${{ steps.composer-cache.outputs.dir }}
+       key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+       restore-keys: |
+         ${{ runner.os }}-composer-
+
+   - name: Install dependencies
+     run: |
+       composer install -o -q
+
+   - name: Zip Folder
+     run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" "phpcs.xml" "composer.json" "composer.lock" ".gitignore"
+
+   - name: Release
+     uses: softprops/action-gh-release@v1
+     if: startsWith(github.ref, 'refs/tags/')
+     with:
+       files: ${{ github.event.repository.name }}.zip
+     env:
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 <p>&nbsp;</p>
 
 
@@ -128,10 +206,11 @@ GitHub allows us to change our notification settings and manage our subscription
 
 
 ## Webgraphy
-- What is CI/CD? -> <https://www.redhat.com/en/topics/devops/what-is-ci-cd>
-- Intro to Continuous Integration, Continuous Delivery, and Continuous Deployment -> <https://www.indellient.com/blog/whats-the-difference-between-continuous-integration-continuous-delivery-and-continuous-deployment/>
-- Continuous integration vs. delivery vs. deployment -> <https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment>
-- Understanding GitHub Actions -> <https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions>
-- How to Use Github Actions to Automate Your Repository Builds -> <https://www.cloudsavvyit.com/15207/how-to-use-github-actions-to-automate-your-repository-builds/>
-- CI/CD for C/C++ games using GitHub Actions -> <https://thatonegamedev.com/cpp/ci-cd-for-c-c-games-using-github-actions/>
-- How to automate the MSI Building with GitHub Actions -> <https://www.youtube.com/watch?v=T_Rj3_M-m8I>
+- What is CI/CD?:  <https://www.redhat.com/en/topics/devops/what-is-ci-cd>
+- Intro to Continuous Integration, Continuous Delivery, and Continuous Deployment:  <https://www.indellient.com/blog/whats-the-difference-between-continuous-integration-continuous-delivery-and-continuous-deployment/>
+- Continuous integration vs. delivery vs. deployment:  <https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment>
+- Understanding GitHub Actions:  <https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions>
+- How to Use Github Actions to Automate Your Repository Builds:  <https://www.cloudsavvyit.com/15207/how-to-use-github-actions-to-automate-your-repository-builds/>
+- CI/CD for C/C++ games using GitHub Actions:  <https://thatonegamedev.com/cpp/ci-cd-for-c-c-games-using-github-actions/>
+- How to automate the MSI Building with GitHub Actions:  <https://www.youtube.com/watch?v=T_Rj3_M-m8I>
+- Introduction to Markdown:  <https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/tutorial-de-markdown/>
