@@ -8,15 +8,21 @@ Both methods are quite common into the *DevOps* world. *DevOps* is a set of prac
 Understanding the differences between them it’s crucial to properly implementing them.
 
 ### CI (Continuous Integration)
-Definition
+Continuous Integration is the practice where developers merge the changes to the code base to the main branch as often as possible. These changes are validated by creating a build and then running automated tests against the build. If these tests don’t pass, the changes aren’t merged, and developers avoid integration challenges that can happen.
 
 ![](CI-CD1.jpg)
 
-### CI (Continuous Delivery)
-Definition
+<p>&nbsp;</p>
 
-### CI (Continuous Deployment)
-Definition
+### CD (Continuous Delivery)
+Continuous Delivery is an extension of CI since it enables automation to deploy all the code changes to an environment after the changes have been merged. This means that there is an automated release process on top of the automated testing process and that developers can deploy their changes at any time by simply clicking a button or at the completion of CI.
+
+<p>&nbsp;</p>
+
+### CD (Continuous Deployment)
+Continuous Deployment takes the process one step further than continuous delivery. Given that all changes that pass the verification steps at each stage in the pipeline are released to production. This process is completely automated and only a failed verification step will prevent pushing the changes to production.
+
+By this time, the difference here is obvious. Continuous delivery is a partly manual process where developers can deploy any changes to customers by simply clicking a button, while continuous deployment emphasizes automating the entire the process.
 
 ![](CI-CD2.jpg)
 
@@ -75,13 +81,13 @@ To be able to create, add or modify a script we need to:
 ![](edscript1.jpg)
 <p>&nbsp;</p>
 
-2.Open the .yml
+2.Open the *yml* file
 ![](edscript2.jpg)
 <p>&nbsp;</p>
 
 3. Make your changes!
 ![](edscript3.jpg)
-  <p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 ### Example:
@@ -170,6 +176,52 @@ jobs:
        files: ${{ github.event.repository.name }}.zip
      env:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+<p>&nbsp;</p>
+
+GitHub Actions uses YAML syntax to define the workflow. Each workflow is stored as a separate YAML file in your code repository. Here is a short guide of the YAML syntax, to understand how this script is working:
+1. Name: it’s optional, gives name to the workflow.
+```yaml
+name: Create release
+```
+<p>&nbsp;</p>
+
+2. On: specifies the trigger for the workflow. In this case the workflow will be executed with the creation of a release.
+```yaml
+on:
+ release:
+   types:
+     - created
+```
+<p>&nbsp;</p>
+
+3. Jobs: Groups together all the jobs that run in the workflow.
+```yaml
+jobs:
+```
+<p>&nbsp;</p>
+
+4. Runs-on: In this case it configures the job to run on the latest version of an Ubuntu Linux runner. You can specify to be reunned in another environments.
+```yaml
+runs-on: ubuntu-latest
+```
+<p>&nbsp;</p>
+
+5. Steps: Groups together all the steps. Each item nested under this section is a separate action or shell script.
+```yaml
+steps:
+```
+<p>&nbsp;</p>
+
+6. Uses: The uses keyword specifies that this step will run v2 of the actions/checkout action. Specifically this action, checks out your repository onto the runner, allowing you to run scripts or other actions against your code (such as build and test tools). You should use the checkout action any time your workflow will run against the repository's code.
+```yaml
+- uses: actions/checkout@v2
+```
+<p>&nbsp;</p>
+
+7. Run: The run keyword tells the job to execute a command on the runner.
+```yaml
+run: zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*" "phpcs.xml" "composer.json" "composer.lock" ".gitignore"
 ```
 <p>&nbsp;</p>
 
