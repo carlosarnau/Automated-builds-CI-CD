@@ -105,7 +105,6 @@ jobs:
       - name: Comment on new issue
         uses: actions/github-script@0.8.0
         with:
-          github-token: {% raw %${{secrets.GITHUB-TOKEN}}{% endraw %}
           script: |
               github.issues.createComment({
               issue_number: context.issue.number,
