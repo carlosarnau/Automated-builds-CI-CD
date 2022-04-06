@@ -116,7 +116,6 @@ jobs:
         if: contains(github.event.issue.labels.*.name, 'bug')
         uses: actions/github-script@0.8.0
         with:
-          github-token: {% raw %${{secrets.GITHUB-TOKEN}}{% endraw %}
           script: |
               github.projects.createCard({
               column.id: {{columID}},
