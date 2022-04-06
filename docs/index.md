@@ -1,4 +1,4 @@
-## Introduction
+## Automated builds CI + CD
 CD/CI are methods frequently used to deliver apps to customers making use of automation into the stages of the app development. The main concepts attributed to CD and CI are *Continuous Integration* for CI and *Continuous Delivery* and/or *Continuous Deployment* for CD. 
 <p></p>
 
